@@ -1,0 +1,37 @@
+header {
+  padding: 2rem;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+
+    //Logo
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &--img {
+        height: 3.75rem;
+      }
+
+      &--title {
+        font-size: 2.3rem;
+        font-weight: 700;
+      }
+    }
+
+    //Nav Bar
+    &__bar {
+      margin: auto;
+
+      &--list {
+        &-item {
+          color: $color-white;
+          display: inline;
+        }
+      }
+    }
+  }
+}
