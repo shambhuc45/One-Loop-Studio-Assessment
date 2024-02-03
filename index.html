@@ -11,11 +11,12 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="" />
   </head>
   <body>
     <header>
-      <nav class="navigation">
-        <a href="index.html" class="navigation__logo"
+      <nav class="navigation flex">
+        <a href="index.html" class="navigation__logo flex"
           ><img
             src="./images/logo-1-1.png"
             alt="Logo"
@@ -23,22 +24,45 @@
           />
           <span class="navigation__logo--title">Virtual Reality</span></a
         >
-        <div class="navigation__bar flex">
-          <ul class="navigation__bar--list">
-            <li class="navigation__bar--list-item">Home</li>
-            <li class="navigation__bar--list-item">About Us</li>
-            <li class="navigation__bar--list-item">Portfolio</li>
-            <li class="navigation__bar--list-item">Contact Us</li>
-            <li class="navigation__bar--list-item">Services</li>
-            <li class="navigation__bar--list-item">News</li>
-            <li class="navigation__bar--list-item">Log in</li>
-            <li class="navigation__bar--list-item">Icon</li>
+        <div class="navigation__bar">
+          <!-- <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div> -->
+          <ul class="navigation__bar--mainlist show">
+            <li class="navigation__bar--mainlist-item"><a href="#">Home </a></li>
+            <li class="navigation__bar--mainlist-item">
+              <a href="#">About Us<iconify-icon icon="mingcute:down-line"
+                class="navbar-downIcon"></span></a>
+            </li>
+            <li class="navigation__bar--mainlist-item">
+              <a href="#">Portfolio </a>
+            </li>
+            <li class="navigation__bar--mainlist-item">
+              <a href="#">Contact Us </a>
+            </li>
+            <li class="navigation__bar--mainlist-item">
+              <a href="#">Services </a>
+            </li>
+            <li class="navigation__bar--mainlist-item"><a href="#">News </a></li>
           </ul>
-          <div class="navigation__btn">
-            <a href="#" class="btn-primary">Get Started</a>
-          </div>
+
+          <ul class="navigation__bar--secondlist">
+
+            <li class="navigation__bar--secondlist-item"><a href="#" class="user"><iconify-icon icon="fa-solid:user"></iconify-icon> &nbsp;Log in </a></li>
+            <li class="navigation__bar--secondlist-item"><a href="#" class="cart"><iconify-icon icon="bi:bag" class="color-blue" height="1.4rem"></iconify-icon></a></li>
+            <li class="navigation__bar--secondlist-item"><a href="#" class="btn-primary">Get Started</a></li>
+          </ul>
+         
         </div>
       </nav>
     </header>
+
+
+    <!-- Script  -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+    <!-- <script src="./js/1hamburger.js"></script> -->
   </body>
 </html>

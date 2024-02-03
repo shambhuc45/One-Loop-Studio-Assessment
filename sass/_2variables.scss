@@ -16,11 +16,12 @@ html {
   font-size: 62.5%; // 10px =1rem // 10/16*100%
   font-family: "Sen", sans-serif;
   padding: 0 5rem;
+
   @include respond(tab-land) {
     font-size: 56.25%; // 9px = 1rem // 9/16*100%
   }
   @include respond(tab-port) {
-    font-size: 50%; // 8px = 1rem // 8/16*100%
+    font-size: 50%; // 8px = 8/16*100%
   }
   @include respond(phone) {
     font-size: 37.5%; // 6px = 1rem // 6/16*100%
@@ -75,7 +76,23 @@ a {
 .margin-bottom-large {
   margin-bottom: 8rem;
 }
-// .btn-primary {
-//   padding: 0 2rem;
-//   border: 2px solid $color-primary;
-// }
+.btn-primary {
+  padding: 15px 25px;
+  font-size: 17px;
+  // letter-spacing: 0.02rem;
+  font-weight: 500;
+  border: 2.5px solid $color-primary;
+  color: $color-primary;
+  transition: all 0.4s ease-in-out;
+  white-space: nowrap;
+  &:hover {
+    color: #000;
+    background: $color-primary;
+    border: 2.5px solid $color-primary;
+    transition: all 0.4s ease-in-out;
+  }
+
+  @include respond(desktops) {
+    padding: 13px 23px;
+  }
+}
