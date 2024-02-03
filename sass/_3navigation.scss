@@ -1,35 +1,145 @@
 header {
-  padding: 2rem;
+  padding: 20px;
 
   .navigation {
-    display: flex;
-    align-items: center;
-    height: 6rem;
+    font-size: 16px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: space-between;
 
-    //Logo
+    @include respond(desktops) {
+      grid-template-columns: 100%;
+    }
+    // @include respond(tab-port) {
+    //   grid-template-columns: 1fr 1fr 1fr;
+    // }
+
     &__logo {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      line-height: 60px;
 
       &--img {
-        height: 3.75rem;
+        height: 37.5px;
+        margin-right: 10px;
       }
-
       &--title {
-        font-size: 2.3rem;
+        font-size: 23px;
         font-weight: 700;
+        white-space: nowrap;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 1.3rem;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $color-primary;
+          transition: width 0.35s ease-in-out;
+        }
+
+        &:hover {
+          opacity: 1;
+          color: $color-primary;
+
+          &::before {
+            width: 100%;
+          }
+        }
       }
     }
-
-    //Nav Bar
     &__bar {
-      margin: auto;
+      display: grid;
+      grid-template-columns: 65% 32%;
+      justify-content: space-between;
 
-      &--list {
+      @include respond(tab-land) {
+        grid-template-columns: 70%;
+        gap: 34px;
+      }
+      // @include respond(tab-port) {
+      //   grid-template-columns: 80%;
+      // }
+
+      // .menu-toggle {
+      //   cursor: pointer;
+      //   display: none;
+
+      //   @include respond(tab-port) {
+      //     display: block;
+      //   }
+      // }
+
+      &--mainlist {
+        display: flex;
+        align-items: center;
+        line-height: 60px;
+        justify-content: space-between;
+        // gap: 3.4rem;
+
+        @include respond(tab-land) {
+          gap: 34px;
+          justify-content: flex-start;
+        }
+        // @include respond(tab-port) {
+        //   display: none;
+
+        //   &.show {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: flex-start;
+        //     background-color: #000;
+        //     z-index: 1;
+        //   }
+        // }
+
         &-item {
-          color: $color-white;
-          display: inline;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+          }
+        }
+      }
+      &--secondlist {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond(tab-land) {
+          width: 60%;
+          gap: 30px;
+          justify-content: flex-start;
+        }
+
+        &-item {
+          a {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+
+            .color-blue {
+              color: $color-primary;
+            }
+          }
+
+          .user {
+            transition: all 0.5s ease;
+            &:hover {
+              color: $color-primary;
+            }
+          }
+          .cart {
+            transition: all 0.3s ease;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
         }
       }
     }
