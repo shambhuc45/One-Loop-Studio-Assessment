@@ -1,0 +1,87 @@
+.whyUs {
+  height: 100%;
+  padding: 10vh 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  letter-spacing: normal;
+
+  &__mainTopic {
+    border: 2px solid $color-primary;
+    height: 100%;
+    padding: 4rem;
+    grid-column: 1 / span 1;
+
+    &--heading {
+      text-transform: capitalize;
+      font-size: 3.8rem;
+      margin-bottom: 3rem;
+    }
+    &--text {
+      text-transform: capitalize;
+      font-size: 1.7rem;
+      line-height: 2.5rem;
+    }
+    &--btn {
+      display: inline-block;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__otherTopic {
+    padding: 3rem 0 3rem 3rem;
+    gap: 1.5rem;
+
+    &--cards {
+      display: flex;
+      gap: 1rem;
+
+      &-item {
+        padding: 1rem 0;
+
+        &__icon {
+          margin-right: 2em;
+          margin-top: 3px;
+          img {
+            height: 35px;
+          }
+        }
+
+        &__info {
+          &--heading {
+            font-size: 2.8rem;
+            margin-bottom: 1.4rem;
+            position: relative;
+            display: inline-block;
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background-color: $color-primary;
+              transition: width 0.35s ease-in-out;
+            }
+
+            &:hover {
+              opacity: 1;
+              color: $color-primary;
+
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+          &--text {
+            text-transform: capitalize;
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
