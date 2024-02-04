@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  letter-spacing: 0.03rem;
 }
 $color-primary: #66fcf1;
 $color-secondary: #f78550;
@@ -79,7 +80,6 @@ a {
 .btn-primary {
   padding: 15px 25px;
   font-size: 17px;
-  // letter-spacing: 0.02rem;
   font-weight: 500;
   border: 2.5px solid $color-primary;
   color: $color-primary;
@@ -94,5 +94,21 @@ a {
 
   @include respond(desktops) {
     padding: 13px 23px;
+  }
+}
+.btn-secondary {
+  outline: 0;
+  border: 0;
+  padding: 1.7rem 2.5rem;
+  background: $color-primary;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.07rem;
+  cursor: pointer;
+  font-family: "Sen", sans-serif;
+
+  &:hover {
+    background: $color-secondary;
   }
 }
