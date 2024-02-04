@@ -30,10 +30,15 @@
             <span class="bar"></span>
         </div> -->
           <ul class="navigation__bar--mainlist show">
-            <li class="navigation__bar--mainlist-item"><a href="#">Home </a></li>
             <li class="navigation__bar--mainlist-item">
-              <a href="#">About Us<iconify-icon icon="mingcute:down-line"
-                class="navbar-downIcon"></span></a>
+              <a href="#">Home </a>
+            </li>
+            <li class="navigation__bar--mainlist-item">
+              <a href="#"
+                >About Us<iconify-icon
+                  icon="mingcute:down-line"
+                  class="navbar-downIcon"
+              /></a>
             </li>
             <li class="navigation__bar--mainlist-item">
               <a href="#">Portfolio </a>
@@ -44,25 +49,98 @@
             <li class="navigation__bar--mainlist-item">
               <a href="#">Services </a>
             </li>
-            <li class="navigation__bar--mainlist-item"><a href="#">News </a></li>
+            <li class="navigation__bar--mainlist-item">
+              <a href="#">News </a>
+            </li>
           </ul>
 
           <ul class="navigation__bar--secondlist">
-
-            <li class="navigation__bar--secondlist-item"><a href="#" class="user"><iconify-icon icon="fa-solid:user"></iconify-icon> &nbsp;Log in </a></li>
-            <li class="navigation__bar--secondlist-item"><a href="#" class="cart"><iconify-icon icon="bi:bag" class="color-blue" height="1.4rem"></iconify-icon></a></li>
-            <li class="navigation__bar--secondlist-item"><a href="#" class="btn-primary">Get Started</a></li>
+            <li class="navigation__bar--secondlist-item">
+              <a href="#" class="user"
+                ><iconify-icon icon="fa-solid:user"></iconify-icon> &nbsp;Log in
+              </a>
+            </li>
+            <li class="navigation__bar--secondlist-item">
+              <a href="#" class="cart"
+                ><iconify-icon
+                  icon="bi:bag"
+                  class="color-blue"
+                  height="1.4rem"
+                ></iconify-icon
+              ></a>
+            </li>
+            <li class="navigation__bar--secondlist-item">
+              <a href="#" class="btn-primary">Get Started</a>
+            </li>
           </ul>
-         
         </div>
       </nav>
     </header>
 
+    <main>
+      <section class="hero">
+        <div class="hero__carousel">
+          <div class="hero__carousel--item active">
+            <div class="hero__carousel--item-text">
+              <p class="heading-paragraph">Where Reality Ends and</p>
+              <br />
+              <h1>
+                Imagination
+                <br />
+                Begins
+              </h1>
+              <br />
+              <p class="text-paragraph">
+                We specialize in providing cutting-edge Virtual Reality
+                solutions that transport you to immersive digital worlds.
+              </p>
+              <div class="hero-btns margin-top-medium flex">
+                <button class="btn-secondary">Explore More</button>
+                <button class="btn-play flex">
+                  <iconify-icon
+                    icon="ant-design:play-circle-filled"
+                    height="60"
+                    width="60"
+                  ></iconify-icon>
+                  &nbsp;Watch Intro
+                </button>
+              </div>
+            </div>
+            <img
+              src="./images/heroImage1.jpg"
+              alt="Image 1"
+              class="hero__carousel--item-image"
+            />
+          </div>
+          <div class="hero__carousel--item">
+            <img
+              src="./images/heroImage2.jpg"
+              alt="Image 2"
+              class="hero__carousel--item-image"
+            />
+          </div>
+        </div>
+        <button class="prev-btn" onclick="changeSlide(-1)">
+          <iconify-icon
+            icon="ic:outline-greater-than"
+            height="26"
+          ></iconify-icon>
+        </button>
+        <button class="next-btn" onclick="changeSlide(1)">
+          <iconify-icon
+            icon="ic:outline-greater-than"
+            height="26"
+          ></iconify-icon>
+        </button>
+      </section>
+    </main>
 
     <!-- Script  -->
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 
     <!-- <script src="./js/1hamburger.js"></script> -->
+
+    <script src="./js/2heroCarousel.mjs"></script>
   </body>
 </html>

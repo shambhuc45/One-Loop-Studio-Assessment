@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  letter-spacing: 0.03rem;
 }
 
 html {
@@ -109,6 +110,22 @@ a {
   .btn-primary {
     padding: 13px 23px;
   }
+}
+
+.btn-secondary {
+  outline: 0;
+  border: 0;
+  padding: 1.7rem 2.5rem;
+  background: #66fcf1;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.07rem;
+  cursor: pointer;
+  font-family: "Sen", sans-serif;
+}
+.btn-secondary:hover {
+  background: #f78550;
 }
 
 header {
@@ -218,4 +235,84 @@ header .navigation__bar--secondlist-item .cart {
 }
 header .navigation__bar--secondlist-item .cart:hover {
   opacity: 0.6;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.hero__carousel {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+.hero__carousel--item {
+  min-width: 100%;
+  position: relative;
+}
+.hero__carousel--item-text {
+  position: absolute;
+  top: 15%;
+  color: white;
+  width: 55%;
+}
+.hero__carousel--item-text .heading-paragraph {
+  color: #66fcf1;
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.hero__carousel--item-text h1 {
+  font-size: 9rem;
+  opacity: 0.9;
+}
+.hero__carousel--item-text .text-paragraph {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+.hero__carousel--item-text .hero-btns {
+  align-items: center;
+}
+.hero__carousel--item-text .hero-btns .btn-play {
+  margin-left: 3rem;
+  color: #66fcf1;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Sen", sans-serif;
+}
+.hero__carousel--item-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.hero .prev-btn,
+.hero .next-btn {
+  border: none;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 8;
+  color: #66fcf1;
+  top: 50%;
+  background: transparent;
+  border: 3px solid #66fcf1;
+  padding: 1rem;
+  z-index: 1000;
+}
+.hero .prev-btn {
+  left: 2%;
+  transform: rotate(180deg);
+}
+.hero .next-btn {
+  right: 2%;
 }
