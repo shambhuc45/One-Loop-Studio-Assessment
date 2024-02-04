@@ -39,15 +39,63 @@
           align-items: center;
 
           .btn-play {
-            margin-left: 3rem;
-            color: $color-primary;
-            background: transparent;
             border: 0;
+            background-color: transparent;
             cursor: pointer;
-            align-items: center;
+
+            &__div {
+              position: relative;
+              margin-left: 5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 8;
+
+              .icon-play {
+                color: $color-primary;
+                background: transparent;
+                // border: 0;
+                cursor: pointer;
+                font-size: 2rem;
+                font-weight: 500;
+                font-family: "Sen", sans-serif;
+                outline: 4px;
+                border: 1px solid $color-primary;
+                border-radius: 50%;
+              }
+
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                border-radius: 50%;
+              }
+              &::after {
+                background: hsla(0, 0%, 100%, 0.749);
+                z-index: 1;
+                animation: pulseAnimation 1s infinite;
+
+                @keyframes pulseAnimation {
+                  0% {
+                    transform: scale(1);
+                    opacity: 0.7;
+                  }
+                  100% {
+                    transform: scale(2.3);
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
+          .watch-intro {
+            margin-left: 3.5rem;
             font-size: 2rem;
-            font-weight: 500;
-            font-family: "Sen", sans-serif;
+            font-weight: 700;
           }
         }
       }

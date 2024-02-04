@@ -25,10 +25,6 @@
           <span class="navigation__logo--title">Virtual Reality</span></a
         >
         <div class="navigation__bar">
-          <!-- <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div> -->
           <ul class="navigation__bar--mainlist show">
             <li class="navigation__bar--mainlist-item">
               <a href="#">Home </a>
@@ -78,9 +74,10 @@
     </header>
 
     <main>
+      <!-- HeroSection Start  -->
       <section class="hero">
         <div class="hero__carousel">
-          <div class="hero__carousel--item active">
+          <div class="hero__carousel--item">
             <div class="hero__carousel--item-text">
               <p class="heading-paragraph">Where Reality Ends and</p>
               <br />
@@ -97,13 +94,16 @@
               <div class="hero-btns margin-top-medium flex">
                 <button class="btn-secondary">Explore More</button>
                 <button class="btn-play flex">
-                  <iconify-icon
-                    icon="ant-design:play-circle-filled"
-                    height="60"
-                    width="60"
-                  ></iconify-icon>
-                  &nbsp;Watch Intro
+                  <div class="btn-play__div">
+                    <iconify-icon
+                      class="icon-play"
+                      icon="ant-design:play-circle-filled"
+                      height="50"
+                      width="50"
+                    ></iconify-icon>
+                  </div>
                 </button>
+                <p class="watch-intro">Watch Intro</p>
               </div>
             </div>
             <img
@@ -113,6 +113,34 @@
             />
           </div>
           <div class="hero__carousel--item">
+            <div class="hero__carousel--item-text">
+              <p class="heading-paragraph">Where Reality Ends and</p>
+              <br />
+              <h1>
+                Imagination
+                <br />
+                Begins
+              </h1>
+              <br />
+              <p class="text-paragraph">
+                We specialize in providing cutting-edge Virtual Reality
+                solutions that transport you to immersive digital worlds.
+              </p>
+              <div class="hero-btns margin-top-medium flex">
+                <button class="btn-secondary">Explore More</button>
+                <button class="btn-play flex">
+                  <div class="btn-play__div">
+                    <iconify-icon
+                      class="icon-play"
+                      icon="ant-design:play-circle-filled"
+                      height="50"
+                      width="50"
+                    ></iconify-icon>
+                  </div>
+                </button>
+                <p class="watch-intro">Watch Intro</p>
+              </div>
+            </div>
             <img
               src="./images/heroImage2.jpg"
               alt="Image 2"
@@ -133,6 +161,14 @@
           ></iconify-icon>
         </button>
       </section>
+
+      <!-- HeroSection End  -->
+
+      <!-- Why Us section Start  -->
+      <section class="whyUs">
+        
+      </section>
+      <!-- Why us section end  -->
     </main>
 
     <!-- Script  -->
