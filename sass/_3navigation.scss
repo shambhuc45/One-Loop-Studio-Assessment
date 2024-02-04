@@ -117,19 +117,16 @@ header {
         }
 
         &-item {
-          a {
+          .user {
             display: flex;
             align-items: center;
             white-space: nowrap;
-
-            .color-blue {
-              color: $color-primary;
-            }
-          }
-
-          .user {
             transition: all 0.5s ease;
             &:hover {
+              color: $color-primary;
+            }
+
+            .color-blue {
               color: $color-primary;
             }
           }

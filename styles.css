@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   text-decoration: none;
   list-style: none;
   letter-spacing: 0.03rem;
@@ -31,6 +31,7 @@ html {
 
 body {
   background-color: #000;
+  color: #fff;
 }
 
 a {
@@ -216,18 +217,16 @@ header .navigation__bar--secondlist {
     justify-content: flex-start;
   }
 }
-header .navigation__bar--secondlist-item a {
+header .navigation__bar--secondlist-item .user {
   display: flex;
   align-items: center;
   white-space: nowrap;
-}
-header .navigation__bar--secondlist-item a .color-blue {
-  color: #66fcf1;
-}
-header .navigation__bar--secondlist-item .user {
   transition: all 0.5s ease;
 }
 header .navigation__bar--secondlist-item .user:hover {
+  color: #66fcf1;
+}
+header .navigation__bar--secondlist-item .user .color-blue {
   color: #66fcf1;
 }
 header .navigation__bar--secondlist-item .cart {
@@ -357,4 +356,80 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 .hero .next-btn {
   right: 2%;
+}
+
+.whyUs {
+  height: 100%;
+  padding: 10vh 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  letter-spacing: normal;
+}
+.whyUs__mainTopic {
+  border: 2px solid #66fcf1;
+  height: 100%;
+  padding: 4rem;
+  grid-column: 1/span 1;
+}
+.whyUs__mainTopic--heading {
+  text-transform: capitalize;
+  font-size: 3.8rem;
+  margin-bottom: 3rem;
+}
+.whyUs__mainTopic--text {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+.whyUs__mainTopic--btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+.whyUs__otherTopic {
+  padding: 3rem 0 3rem 3rem;
+  gap: 1.5rem;
+}
+.whyUs__otherTopic--cards {
+  display: flex;
+  gap: 1rem;
+}
+.whyUs__otherTopic--cards-item {
+  padding: 1rem 0;
+}
+.whyUs__otherTopic--cards-item__icon {
+  margin-right: 2em;
+  margin-top: 3px;
+}
+.whyUs__otherTopic--cards-item__icon img {
+  height: 35px;
+}
+.whyUs__otherTopic--cards-item__info--heading {
+  font-size: 2.8rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+  display: inline-block;
+}
+.whyUs__otherTopic--cards-item__info--heading::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #66fcf1;
+  transition: width 0.35s ease-in-out;
+}
+.whyUs__otherTopic--cards-item__info--heading:hover {
+  opacity: 1;
+  color: #66fcf1;
+}
+.whyUs__otherTopic--cards-item__info--heading:hover::before {
+  width: 100%;
+}
+.whyUs__otherTopic--cards-item__info--text {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
 }
