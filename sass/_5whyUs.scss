@@ -6,6 +6,7 @@
   grid-template-rows: 1fr;
   gap: 2rem;
   letter-spacing: normal;
+  background-color: $color-background;
 
   &__mainTopic {
     border: 2px solid $color-primary;
@@ -41,7 +42,7 @@
         padding: 1rem 0;
 
         &__icon {
-          margin-right: 2em;
+          margin-right: 2.5em;
           margin-top: 3px;
           img {
             height: 35px;

@@ -15,7 +15,7 @@
 
       &-text {
         position: absolute;
-        top: 15%;
+        top: 20%;
         color: white;
         width: 55%;
 
@@ -26,10 +26,6 @@
           text-transform: capitalize;
         }
 
-        h1 {
-          font-size: 9rem;
-          opacity: 0.9;
-        }
         .text-paragraph {
           font-size: 1.8rem;
           font-weight: 500;
@@ -133,4 +129,8 @@
   .next-btn {
     right: 2%;
   }
+}
+.heading-primary {
+  font-size: 7rem;
+  opacity: 0.9;
 }
