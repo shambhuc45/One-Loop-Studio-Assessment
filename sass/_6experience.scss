@@ -1,0 +1,57 @@
+.experience {
+  padding: 2rem 0;
+
+  &__heading--fontSize {
+    font-size: 6rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__left {
+      &__textTop {
+        font-size: 1.76rem;
+        line-height: 3rem;
+      }
+
+      &__imageCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        img {
+          height: 23rem;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &__stats {
+        padding: 2.5rem 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        &__item {
+          &__score {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+
+            span {
+              color: $color-primary;
+            }
+          }
+          &__title {
+            font-size: 1.76rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    &__right {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

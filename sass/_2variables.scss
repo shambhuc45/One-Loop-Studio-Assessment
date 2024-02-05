@@ -10,13 +10,13 @@
 $color-primary: #66fcf1;
 $color-secondary: #f78550;
 $color-dark-blue: #1b67cc;
+$color-background: #0b0c10;
 $color-white: #fff;
 $color-black: #000;
-
+$normal-fontSize: 1.76rem;
 html {
   font-size: 62.5%; // 10px =1rem // 10/16*100%
   font-family: "Sen", sans-serif;
-  padding: 0 5rem;
 
   @include respond(tab-land) {
     font-size: 56.25%; // 9px = 1rem // 9/16*100%
@@ -57,9 +57,6 @@ a {
 .text-center {
   text-align: center;
 }
-.padding-hr-icon {
-  padding-right: 1rem;
-}
 .margin-top-small {
   margin-top: 1rem;
 }
@@ -70,7 +67,7 @@ a {
   margin-top: 8rem;
 }
 .margin-bottom-small {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 .margin-bottom-medium {
   margin-bottom: 4rem;
