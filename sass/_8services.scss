@@ -1,42 +1,8 @@
 .services {
   background: $color-background;
-  padding: 0 5rem;
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
-    &__title {
-      &__small {
-        position: relative;
-        display: inline-block;
-        padding-left: 6rem;
-        color: $color-primary;
-        font-weight: 500;
-        letter-spacing: 2px;
-        font-size: $normal-fontSize;
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0rem;
-          top: 50%;
-          width: 5rem;
-          height: 3px;
-          background-color: $color-primary;
-          transform: translateY(-50%);
-        }
-      }
-      &__big--fontSize {
-        font-size: 4rem;
-      }
-    }
-    &__btn--inline {
-      display: inline-block;
-      box-sizing: border-box;
-    }
-  }
   &__cardContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -46,15 +12,12 @@
       position: relative;
       height: 43rem;
       overflow: hidden;
-      filter: brightness(100%) contrast(100%) saturate(0) blur(0)
-        hue-rotate(0deg);
       transition: filter 0.3s ease-in-out;
 
       &:hover {
-        filter: none;
-
         .services__cardContainer__card__image {
           transform: scale(1.1);
+          filter: none;
           transition: all 0.5s ease-in-out;
         }
       }
@@ -64,6 +27,8 @@
         height: 100%;
         object-fit: cover;
         opacity: 0.65;
+        filter: brightness(100%) contrast(100%) saturate(0) blur(0)
+          hue-rotate(0deg);
         transition: all 0.5s ease-in-out;
       }
       &__info {
@@ -78,13 +43,13 @@
           font-size: $normal-fontSize;
           padding-bottom: 1rem;
           font-weight: 500;
-          filter: none;
         }
         &__title {
           font-size: 2.9rem;
           font-weight: 700;
           white-space: nowrap;
           display: inline-block;
+          cursor: pointer;
           position: relative;
 
           &::before {
