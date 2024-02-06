@@ -632,3 +632,117 @@ header .navigation__bar--secondlist-item .cart:hover {
 .testimonials__item__review__text .quote {
   font-style: italic;
 }
+
+.articles {
+  background-color: #0b0c10;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.articles__content {
+  display: grid;
+  border: 1px gray solid;
+  grid-template-columns: 63% 35%;
+  padding: 3em;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+.articles__content__featured {
+  height: 70rem;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.articles__content__featured:hover .articles__content__featured__image {
+  transform: scale(1.2);
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.articles__content__featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 9;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+.articles__content__featured__image {
+  border-radius: 20px;
+  width: 100%;
+  height: 70rem;
+  object-fit: cover;
+}
+.articles__content__featured__info {
+  padding: 4.5rem;
+  bottom: 0;
+  z-index: 10;
+}
+.articles__content__featured__info__date {
+  font-size: 1.76rem;
+}
+.articles__content__featured__info__title .para-first {
+  font-size: 4rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.articles__content__featured__info__title .para-first::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.35s ease-in-out;
+}
+.articles__content__featured__info__title:hover {
+  opacity: 1;
+}
+.articles__content__featured__info__title:hover .para-first::before {
+  width: 100%;
+}
+.articles__content__all {
+  width: 100%;
+  padding-left: 4rem;
+}
+.articles__content__all__item {
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+}
+.articles__content__all__item__imageContainer {
+  height: 15rem;
+  border-radius: 15px;
+}
+.articles__content__all__item__imageContainer:hover .articles__content__all__item__imageContainer__image {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.articles__content__all__item__imageContainer__image {
+  height: 15rem;
+  width: 12.5rem;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+.articles__content__all__item__info {
+  font-size: 1.76rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.articles__content__all__item__info__title {
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.articles__content__all__item__info__title:hover {
+  color: #66fcf1;
+  text-decoration: underline;
+  font-size: 1.76rem;
+}
+.articles__content__all__item__info__date {
+  align-items: center;
+  font-weight: 600;
+}
