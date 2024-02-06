@@ -55,8 +55,8 @@ a {
   display: flex;
 }
 
-.row {
-  padding: 0 8rem;
+.overallPadding {
+  padding: 0 5rem;
 }
 
 .text-center {
@@ -342,11 +342,11 @@ header .navigation__bar--secondlist-item .cart:hover {
   z-index: 1000;
 }
 .hero .prev-btn {
-  left: 2%;
+  left: 5rem;
   transform: rotate(180deg);
 }
 .hero .next-btn {
-  right: 2%;
+  right: 5rem;
 }
 
 .heading-primary {
@@ -356,7 +356,8 @@ header .navigation__bar--secondlist-item .cart:hover {
 
 .whyUs {
   height: 100%;
-  padding: 10vh 0;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
@@ -432,7 +433,8 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 
 .experience {
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .experience__heading--fontSize {
   font-size: 6rem;
@@ -478,17 +480,13 @@ header .navigation__bar--secondlist-item .cart:hover {
   justify-content: center;
 }
 
-.services {
-  background: #0b0c10;
-  padding: 0 5rem;
-}
-.services__header {
+.headerElement {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
 }
-.services__header__title__small {
+.headerElement__title__small {
   position: relative;
   display: inline-block;
   padding-left: 6rem;
@@ -497,7 +495,7 @@ header .navigation__bar--secondlist-item .cart:hover {
   letter-spacing: 2px;
   font-size: 1.76rem;
 }
-.services__header__title__small::before {
+.headerElement__title__small::before {
   content: "";
   position: absolute;
   left: 0rem;
@@ -507,12 +505,19 @@ header .navigation__bar--secondlist-item .cart:hover {
   background-color: #66fcf1;
   transform: translateY(-50%);
 }
-.services__header__title__big--fontSize {
+.headerElement__title__big--fontSize {
   font-size: 4rem;
+  text-transform: capitalize;
 }
-.services__header__btn--inline {
+.headerElement__btn--inline {
   display: inline-block;
   box-sizing: border-box;
+}
+
+.services {
+  background: #0b0c10;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .services__cardContainer {
   display: grid;
@@ -523,14 +528,11 @@ header .navigation__bar--secondlist-item .cart:hover {
   position: relative;
   height: 43rem;
   overflow: hidden;
-  filter: brightness(100%) contrast(100%) saturate(0) blur(0) hue-rotate(0deg);
   transition: filter 0.3s ease-in-out;
-}
-.services__cardContainer__card:hover {
-  filter: none;
 }
 .services__cardContainer__card:hover .services__cardContainer__card__image {
   transform: scale(1.1);
+  filter: none;
   transition: all 0.5s ease-in-out;
 }
 .services__cardContainer__card__image {
@@ -538,6 +540,7 @@ header .navigation__bar--secondlist-item .cart:hover {
   height: 100%;
   object-fit: cover;
   opacity: 0.65;
+  filter: brightness(100%) contrast(100%) saturate(0) blur(0) hue-rotate(0deg);
   transition: all 0.5s ease-in-out;
 }
 .services__cardContainer__card__info {
@@ -552,13 +555,13 @@ header .navigation__bar--secondlist-item .cart:hover {
   font-size: 1.76rem;
   padding-bottom: 1rem;
   font-weight: 500;
-  filter: none;
 }
 .services__cardContainer__card__info__title {
   font-size: 2.9rem;
   font-weight: 700;
   white-space: nowrap;
   display: inline-block;
+  cursor: pointer;
   position: relative;
 }
 .services__cardContainer__card__info__title::before {
@@ -577,4 +580,55 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 .services__cardContainer__card__info__title:hover::before {
   width: 100%;
+}
+
+.testimonials__item {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  border: 1.5px gray solid;
+  border-radius: 20px;
+  padding: 8rem 6.5rem;
+}
+.testimonials__item__userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials__item__userInfo__image {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.testimonials__item__userInfo__name {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+.testimonials__item__userInfo__position {
+  color: #66fcf1;
+  font-size: 1.76rem;
+  font-weight: 600;
+}
+.testimonials__item__review {
+  position: relative;
+  padding: 0 1rem;
+}
+.testimonials__item__review::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2.5rem;
+  width: 1px;
+  height: 100%;
+  background-color: gray;
+}
+.testimonials__item__review__text {
+  font-size: 2.72rem;
+  line-height: 4.5rem;
+  font-weight: 400;
+}
+.testimonials__item__review__text .quote {
+  font-style: italic;
 }
