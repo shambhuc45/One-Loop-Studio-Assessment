@@ -832,3 +832,57 @@ header .navigation__bar--secondlist-item .cart:hover {
 .pricing__container__content--active * {
   transform: scale(1.05);
 }
+
+.clientService__cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.clientService__cardContainer__card {
+  background: #0b0c10;
+  padding: 6rem;
+  border-bottom: 2px solid #66fcf1;
+}
+.clientService__cardContainer__card__image {
+  margin-bottom: 2.5rem;
+  display: block;
+}
+.clientService__cardContainer__card__title {
+  text-transform: capitalize;
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+.clientService__cardContainer__card__title::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  background-color: #66fcf1;
+  transition: width 0.35s ease-in-out;
+}
+.clientService__cardContainer__card__title:hover {
+  opacity: 1;
+  color: #66fcf1;
+}
+.clientService__cardContainer__card__title:hover::before {
+  width: 100%;
+}
+.clientService__cardContainer__card__description {
+  font-size: 1.76rem;
+  line-height: 3rem;
+  opacity: 0.8;
+}
+.clientService__cardContainer__card__btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 1.76rem;
+  color: #66fcf1;
+  font-weight: 600;
+}
+.clientService__btn {
+  justify-content: center;
+}
