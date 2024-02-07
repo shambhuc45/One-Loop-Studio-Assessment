@@ -259,7 +259,7 @@ header .navigation__bar--secondlist-item .cart:hover {
   text-transform: capitalize;
 }
 .hero__carousel--item-text .text-paragraph {
-  font-size: 1.8rem;
+  font-size: 1.76rem;
   font-weight: 500;
   line-height: 30px;
 }
@@ -373,12 +373,12 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 .whyUs__mainTopic--heading {
   text-transform: capitalize;
-  font-size: 3.8rem;
+  font-size: 4rem;
   margin-bottom: 3rem;
 }
 .whyUs__mainTopic--text {
   text-transform: capitalize;
-  font-size: 1.7rem;
+  font-size: 1.76rem;
   line-height: 2.5rem;
 }
 .whyUs__mainTopic--btn {
@@ -428,7 +428,7 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 .whyUs__otherTopic--cards-item__info--text {
   text-transform: capitalize;
-  font-size: 1.7rem;
+  font-size: 1.76rem;
   line-height: 2.5rem;
 }
 
@@ -557,7 +557,7 @@ header .navigation__bar--secondlist-item .cart:hover {
   font-weight: 500;
 }
 .services__cardContainer__card__info__title {
-  font-size: 2.9rem;
+  font-size: 2.8rem;
   font-weight: 700;
   white-space: nowrap;
   display: inline-block;
@@ -625,7 +625,7 @@ header .navigation__bar--secondlist-item .cart:hover {
   background-color: gray;
 }
 .testimonials__item__review__text {
-  font-size: 2.72rem;
+  font-size: 2.8rem;
   line-height: 4.5rem;
   font-weight: 400;
 }
@@ -745,4 +745,90 @@ header .navigation__bar--secondlist-item .cart:hover {
 .articles__content__all__item__info__date {
   align-items: center;
   font-weight: 600;
+}
+
+.pricing {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+.pricing__header {
+  text-align: center;
+}
+.pricing__header__small {
+  color: #66fcf1;
+  font-size: 1.76rem;
+  letter-spacing: 3px;
+  padding-bottom: 2rem;
+}
+.pricing__header__big {
+  font-size: 4rem;
+}
+.pricing__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.pricing__container__content {
+  background-color: #0b0c10;
+  padding: 5rem;
+}
+.pricing__container__content__price {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.pricing__container__content__price span {
+  font-style: italic;
+  font-size: 1.76rem;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+.pricing__container__content__price span span {
+  color: #f78550;
+  margin: 0;
+}
+.pricing__container__content__title {
+  color: #66fcf1;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 3.8rem 0;
+}
+.pricing__container__content__description {
+  font-size: 1.76rem;
+  line-height: 2.8rem;
+  padding-bottom: 1rem;
+}
+.pricing__container__content__features__item {
+  font-size: 1.76rem;
+  padding-bottom: 1.5rem;
+}
+.pricing__container__content__features__item::before {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%2366fcf1' d='M437.3 30L202.7 339.3L64 200.7l-64 64L213.3 478L512 94z'/%3E%3C/svg%3E");
+}
+.pricing__container__content__btn--padding {
+  margin-top: 1rem;
+  padding: 1.3rem;
+  text-align: center;
+  display: block;
+}
+.pricing__container__content__btn--active {
+  background-color: #66fcf1;
+  color: #000;
+}
+.pricing__container__content__btn--active:hover {
+  background-color: #f78550;
+  border-color: #f78550;
+}
+.pricing__container__content--active {
+  transform: translateY(-4%);
+  height: 108%;
+  align-items: center;
+  border: 2px solid #66fcf1;
+}
+.pricing__container__content--active * {
+  transform: scale(1.05);
 }

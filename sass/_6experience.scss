@@ -12,7 +12,7 @@
 
     &__left {
       &__textTop {
-        font-size: 1.76rem;
+        font-size: $normal-fontSize;
         line-height: 3rem;
       }
 
@@ -35,7 +35,7 @@
 
         &__item {
           &__score {
-            font-size: 4rem;
+            font-size: $bigger-fontSize;
             margin-bottom: 1rem;
 
             span {
@@ -43,7 +43,7 @@
             }
           }
           &__title {
-            font-size: 1.76rem;
+            font-size: $normal-fontSize;
             font-weight: 500;
           }
         }

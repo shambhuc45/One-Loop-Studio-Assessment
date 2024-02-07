@@ -17,12 +17,12 @@
 
     &--heading {
       text-transform: capitalize;
-      font-size: 3.8rem;
+      font-size: $bigger-fontSize;
       margin-bottom: 3rem;
     }
     &--text {
       text-transform: capitalize;
-      font-size: 1.7rem;
+      font-size: $normal-fontSize;
       line-height: 2.5rem;
     }
     &--btn {
@@ -52,7 +52,7 @@
 
         &__info {
           &--heading {
-            font-size: 2.8rem;
+            font-size: $medium-fontSize;
             margin-bottom: 1.4rem;
             position: relative;
             display: inline-block;
@@ -79,7 +79,7 @@
           }
           &--text {
             text-transform: capitalize;
-            font-size: 1.7rem;
+            font-size: $normal-fontSize;
             line-height: 2.5rem;
           }
         }
