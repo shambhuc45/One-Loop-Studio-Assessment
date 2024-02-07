@@ -1,0 +1,61 @@
+.clientService {
+  &__cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    &__card {
+      background: $color-background;
+      padding: 6rem;
+      border-bottom: 2px solid $color-primary;
+
+      &__image {
+        margin-bottom: 2.5rem;
+        display: block;
+      }
+      &__title {
+        text-transform: capitalize;
+        font-size: $medium-fontSize;
+        margin-bottom: 2.5rem;
+        position: relative;
+        display: inline-block;
+
+        &::before {
+          position: absolute;
+          content: "";
+          height: 2px;
+          bottom: -4px;
+          left: 0;
+          width: 0%;
+          background-color: $color-primary;
+          transition: width 0.35s ease-in-out;
+        }
+
+        &:hover {
+          opacity: 1;
+          color: $color-primary;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+      &__description {
+        font-size: $normal-fontSize;
+        line-height: 3rem;
+        opacity: 0.8;
+      }
+      &__btn {
+        display: inline-block;
+        margin-top: 2.5rem;
+        font-size: $normal-fontSize;
+        color: $color-primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__btn {
+    justify-content: center;
+  }
+}
