@@ -1,0 +1,94 @@
+.pricing {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: rgba(128, 128, 128, 0.15);
+
+  &__header {
+    text-align: center;
+
+    &__small {
+      color: $color-primary;
+      font-size: $normal-fontSize;
+      letter-spacing: 3px;
+      padding-bottom: 2rem;
+    }
+    &__big {
+      font-size: $bigger-fontSize;
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    &__content {
+      background-color: $color-background;
+      padding: 5rem;
+      &__price {
+        font-size: 6rem;
+        font-weight: 700;
+        span {
+          font-style: italic;
+          font-size: $normal-fontSize;
+          font-weight: 500;
+          margin-left: 2rem;
+          span {
+            color: $color-secondary;
+            margin: 0;
+          }
+        }
+      }
+      &__title {
+        color: $color-primary;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 3.8rem 0;
+      }
+      &__description {
+        font-size: $normal-fontSize;
+        line-height: 2.8rem;
+        padding-bottom: 1rem;
+      }
+      &__features {
+        &__item {
+          font-size: $normal-fontSize;
+          padding-bottom: 1.5rem;
+
+          &::before {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.125em;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%2366fcf1' d='M437.3 30L202.7 339.3L64 200.7l-64 64L213.3 478L512 94z'/%3E%3C/svg%3E");
+          }
+        }
+      }
+      &__btn--padding {
+        margin-top: 1rem;
+        padding: 1.3rem;
+        text-align: center;
+        display: block;
+      }
+      &__btn--active {
+        background-color: $color-primary;
+        color: #000;
+
+        &:hover {
+          background-color: $color-secondary;
+          border-color: $color-secondary;
+        }
+      }
+    }
+
+    &__content--active {
+      transform: translateY(-4%);
+      height: 108%;
+      align-items: center;
+      border: 2px solid $color-primary;
+
+      * {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
