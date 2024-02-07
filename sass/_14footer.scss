@@ -1,0 +1,17 @@
+.footer {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+
+  &__primary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    &__info {
+    }
+    &__quickContainer {
+    }
+    &__recentNews {
+    }
+    &__contact {
+    }
+  }
+}

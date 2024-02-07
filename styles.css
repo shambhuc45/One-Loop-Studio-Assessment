@@ -886,3 +886,45 @@ header .navigation__bar--secondlist-item .cart:hover {
 .clientService__btn {
   justify-content: center;
 }
+
+.clients {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+.clients__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 36em) {
+  .clients__container {
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+}
+.clients__container__image {
+  display: flex;
+  justify-content: center;
+  filter: brightness(1000%);
+}
+.clients__container__image img {
+  height: 9.5rem;
+}
+@media (max-width: 75em) {
+  .clients__container__image img {
+    height: 7rem;
+  }
+}
+@media (max-width: 62em) {
+  .clients__container__image img {
+    height: 5rem;
+  }
+}
+@media (max-width: 36em) {
+  .clients__container__image img {
+    height: auto;
+  }
+}
