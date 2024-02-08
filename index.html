@@ -29,12 +29,17 @@
             <li class="navigation__bar--mainlist-item">
               <a href="#">Home </a>
             </li>
-            <li class="navigation__bar--mainlist-item">
+            <li class="navigation__bar--mainlist-item dropdown">
               <a href="#"
                 >About Us<iconify-icon
                   icon="mingcute:down-line"
                   class="navbar-downIcon"
               /></a>
+              <ul class="sub-menu">
+                <li class="dropdown-items"><a href="#">Team</a></li>
+                <li class="dropdown-items"><a href="#">Testimonials</a></li>
+                <li class="dropdown-items"><a href="#">FAQ</a></li>
+              </ul>
             </li>
             <li class="navigation__bar--mainlist-item">
               <a href="#">Portfolio </a>
@@ -148,13 +153,13 @@
             />
           </div>
         </div>
-        <button class="prev-btn" onclick="changeSlide(-1)">
+        <button class="hero__prev__btn" onclick="changeSlide(-1)">
           <iconify-icon
             icon="ic:outline-greater-than"
             height="26"
           ></iconify-icon>
         </button>
-        <button class="next-btn" onclick="changeSlide(1)">
+        <button class="hero__next__btn" onclick="changeSlide(1)">
           <iconify-icon
             icon="ic:outline-greater-than"
             height="26"
@@ -251,8 +256,20 @@
             <div
               class="experience__content__left__imageCards margin-bottom-small"
             >
-              <img src="./images/exp 1.jpg" alt="" />
-              <img src="./images/exp2.jpg" alt="" />
+              <div class="experience__content__left__imageCards__container">
+                <img
+                  src="./images/exp 1.jpg"
+                  alt=""
+                  class="experience__content__left__imageCards__container__image"
+                />
+              </div>
+              <div class="experience__content__left__imageCards__container">
+                <img
+                  src="./images/exp2.jpg"
+                  alt=""
+                  class="experience__content__left__imageCards__container__image"
+                />
+              </div>
             </div>
             <div class="experience__content__left__stats">
               <div class="experience__content__left__stats__item">
@@ -360,6 +377,20 @@
               </h2>
             </div>
           </div>
+          <button class="previous__btn__secondary">
+            <iconify-icon
+              icon="mdi:greater-than"
+              class="services__next__btn__icon"
+              height="23"
+            ></iconify-icon>
+          </button>
+          <button class="next__btn__secondary">
+            <iconify-icon
+              icon="mdi:greater-than"
+              class="services__next__btn__icon"
+              height="23"
+            ></iconify-icon>
+          </button>
         </div>
       </section>
       <!-- Services Section End  -->
@@ -383,54 +414,65 @@
             >
           </div>
         </div>
-
-        <div class="testimonials__item">
-          <div class="testimonials__item__userInfo">
-            <img
-              src="./images/testimonial.jpg"
-              class="testimonials__item__userInfo__image"
-              alt=""
-            />
-            <p class="testimonials__item__userInfo__name">Shambhu</p>
-            <p class="testimonials__item__userInfo__position">Founder/CEO</p>
-          </div>
-          <div class="testimonials__item__review">
-            <h2 class="testimonials__item__review__text">
-              <span class="quote">" </span>Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Sit facilis iure magnam dolorem nisi
-              quod eaque officia id ea, repellendus at quo mollitia commodi
-              reiciendis incidunt totam.<span class="quote">"</span>
-            </h2>
-            <div
-              class="testimonials__item__review__stars flex margin-top-small"
-            >
-              <iconify-icon
-                icon="emojione:star"
-                width="23"
-                height="23"
-              ></iconify-icon>
-              <iconify-icon
-                icon="emojione:star"
-                width="23"
-                height="23"
-              ></iconify-icon>
-              <iconify-icon
-                icon="emojione:star"
-                width="23"
-                height="23"
-              ></iconify-icon>
-              <iconify-icon
-                icon="emojione:star"
-                width="23"
-                height="23"
-              ></iconify-icon>
-              <iconify-icon
-                icon="emojione:star"
-                width="23"
-                height="23"
-              ></iconify-icon>
+        <div class="testimonials__container">
+          <div class="testimonials__container__item">
+            <div class="testimonials__container__item__userInfo">
+              <img
+                src="./images/testimonial.jpg"
+                class="testimonials__container__item__userInfo__image"
+                alt=""
+              />
+              <p class="testimonials__container__item__userInfo__name">
+                Shambhu
+              </p>
+              <p class="testimonials__container__item__userInfo__position">
+                Founder/CEO
+              </p>
+            </div>
+            <div class="testimonials__container__item__review">
+              <h2 class="testimonials__container__item__review__text">
+                <span class="quote">" </span>Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Sit facilis iure magnam dolorem
+                nisi quod eaque officia id ea, repellendus at quo mollitia
+                commodi reiciendis incidunt totam.<span class="quote">"</span>
+              </h2>
+              <div
+                class="testimonials__container__item__review__stars flex margin-top-small"
+              >
+                <iconify-icon
+                  icon="emojione:star"
+                  width="23"
+                  height="23"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="emojione:star"
+                  width="23"
+                  height="23"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="emojione:star"
+                  width="23"
+                  height="23"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="emojione:star"
+                  width="23"
+                  height="23"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="emojione:star"
+                  width="23"
+                  height="23"
+                ></iconify-icon>
+              </div>
             </div>
           </div>
+          <button class="btn__prev__testimonials">
+            <iconify-icon icon="mdi:greater-than" height="23"></iconify-icon>
+          </button>
+          <button class="btn__next__testimonials">
+            <iconify-icon icon="mdi:greater-than" height="23"></iconify-icon>
+          </button>
         </div>
       </section>
 
@@ -785,7 +827,7 @@
       <!-- Section Client End -->
     </main>
 
-    <footer class="footer">
+    <footer class="footer overallPadding">
       <div class="footer__primary">
         <div class="footer__primary__info">
           <a href="index.html" class="footer__primary__info__logoSection flex"
@@ -804,64 +846,151 @@
           </p>
         </div>
         <div class="footer__primary__quickContainer">
-          <h2 class="footer__primary__quickContainer__title">Quick Links</h2>
+          <h2 class="heading__footer__primary">Quick Links</h2>
           <ul class="footer__primary__quickContainer__list">
             <a href="#">
-              <li class="footer__primary__quickContainer__list__item">
+              <li
+                class="footer__primary__quickContainer__list__item--greenTick ul__listItem__footer"
+              >
                 Our Services
               </li></a
             >
             <a href="#">
-              <li class="footer__primary__quickContainer__list__item">
+              <li
+                class="footer__primary__quickContainer__list__item--greenTick ul__listItem__footer"
+              >
                 Our Portfolio
               </li></a
             >
             <a href="#">
-              <li class="footer__primary__quickContainer__list__item">
+              <li
+                class="footer__primary__quickContainer__list__item--greenTick ul__listItem__footer"
+              >
                 Contact
               </li></a
             >
             <a href="#">
-              <li class="footer__primary__quickContainer__list__item">
+              <li
+                class="footer__primary__quickContainer__list__item--greenTick ul__listItem__footer"
+              >
                 News
               </li></a
             >
           </ul>
         </div>
         <div class="footer__primary__recentNews">
-          <div class="footer__primary__recentNews__title">Recent News</div>
+          <div class="heading__footer__primary">Recent News</div>
           <ul class="footer__primary__recentNews__list">
             <a href="#">
-              <li class="footer__primary__recentNews__list">
-                Blocks <span class="bracket">2</span>
+              <li
+                class="footer__primary__recentNews__list__item--center ul__listItem__footer"
+              >
+                <iconify-icon icon="mingcute:time-line"></iconify-icon>Blocks
+                <span class="bracket">2</span>
               </li>
             </a>
             <a href="#">
-              <li class="footer__primary__recentNews__list">
-                FSE <span class="bracket">2</span>
+              <li
+                class="footer__primary__recentNews__list__item--center ul__listItem__footer"
+              >
+                <iconify-icon icon="mingcute:time-line"></iconify-icon>FSE
+                <span class="bracket">2</span>
               </li>
             </a>
             <a href="#">
-              <li class="footer__primary__recentNews__list">
-                Gutenify <span class="bracket">2</span>
+              <li
+                class="footer__primary__recentNews__list__item--center ul__listItem__footer"
+              >
+                <iconify-icon icon="mingcute:time-line"></iconify-icon>Gutenify
+                <span class="bracket">2</span>
               </li>
             </a>
           </ul>
         </div>
         <div class="footer__primary__contact">
-          <div class="footer__primary__contact__title">Quick Contact</div>
+          <div class="heading__footer__primary">Quick Contact</div>
           <ul class="footer__primary__contact__list">
-            <li class="footer__primary__contact__list">
+            <li class="footer__primary__contact__list ul__listItem__footer">
               New South Wales, Australia
             </li>
-            <li class="footer__primary__contact__list">example@example.com</li>
-            <li class="footer__primary__contact__list">123 3456679</li>
-            <li class="footer__primary__contact__list">10 AM - 5 PM</li>
+            <li class="footer__primary__contact__list ul__listItem__footer">
+              example@example.com
+            </li>
+            <li class="footer__primary__contact__list ul__listItem__footer">
+              123 3456679
+            </li>
+            <li class="footer__primary__contact__list ul__listItem__footer">
+              10 AM - 5 PM
+            </li>
           </ul>
         </div>
       </div>
       <hr />
-      <div class="footer__secondary"></div>
+      <div class="footer__secondary">
+        <div class="footer__secondary__social">
+          <div class="heading__footer__secondary">Follow Us</div>
+          <div class="footer__secondary__social__links flex">
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              class="footer__secondary__social__links__element"
+            >
+              <iconify-icon icon="mdi:youtube" height="20"></iconify-icon></a
+            ><a
+              href="https://twitter.com"
+              target="_blank"
+              class="footer__secondary__social__links__element"
+            >
+              <iconify-icon icon="mdi:twitter" height="20"></iconify-icon>
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="footer__secondary__social__links__element"
+              ><iconify-icon
+                icon="ic:baseline-facebook"
+                height="20"
+              ></iconify-icon
+            ></a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              class="footer__secondary__social__links__element"
+            >
+              <iconify-icon icon="mdi:linkedin" height="20"></iconify-icon>
+            </a>
+          </div>
+        </div>
+        <div class="footer__secondary__formContainer">
+          <div class="heading__footer__secondary">Subscribe Our Newsletter</div>
+          <form action="#" class="footer__secondary__formContainer__form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="email-input"
+              placeholder="Your email address"
+              required
+            />
+            <button type="submit" class="btn-subscribe">Sign Up</button>
+          </form>
+        </div>
+
+        <div class="footer__secondary__payment">
+          <div class="heading__footer__secondary">Payment</div>
+          <div class="footer__secondary__payment__imageContainer">
+            <img
+              src="./images/payment.png"
+              alt=""
+              height="40"
+              class="footer__secondary__payment__imageContainer__image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright text-center">
+        <h4>Proudly powered by Gutenify and WordPress.</h4>
+      </div>
     </footer>
     <!-- Script  -->
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>

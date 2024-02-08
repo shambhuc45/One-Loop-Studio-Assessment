@@ -103,11 +103,10 @@
       }
     }
   }
-  .prev-btn,
-  .next-btn {
+  .hero__prev__btn,
+  .hero__next__btn {
     border: none;
     position: absolute;
-    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,15 +118,32 @@
     border: 3px solid $color-primary;
     padding: 1rem;
     z-index: 1000;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $color-primary;
+      color: #000;
+      transition: all 0.5s ease-in-out;
+    }
   }
 
-  .prev-btn {
-    left: 5rem;
+  .hero__prev__btn {
+    left: -20rem;
     transform: rotate(180deg);
+    transition: left 0.5s ease;
   }
 
-  .next-btn {
-    right: 5rem;
+  .hero__next__btn {
+    right: -20rem;
+    transition: right 0.5s ease;
+  }
+  &:hover {
+    .hero__prev__btn {
+      left: 10rem;
+    }
+    .hero__next__btn {
+      right: 10rem;
+    }
   }
 }
 .heading-primary {
