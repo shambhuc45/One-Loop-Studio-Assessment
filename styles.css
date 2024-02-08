@@ -409,7 +409,9 @@ header .navigation__bar--secondlist-item .cart:hover {
   border: 2px solid #66fcf1;
   height: 100%;
   padding: 4rem;
-  grid-column: 1/span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .whyUs__mainTopic--heading {
   text-transform: capitalize;
@@ -424,6 +426,7 @@ header .navigation__bar--secondlist-item .cart:hover {
 .whyUs__mainTopic--btn {
   display: inline-block;
   margin-top: 2.5rem;
+  width: fit-content;
 }
 .whyUs__otherTopic {
   padding: 3rem 0 3rem 3rem;
@@ -473,8 +476,7 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 
 .experience {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 10vh;
 }
 .experience__heading--fontSize {
   font-size: 6rem;
@@ -540,7 +542,7 @@ header .navigation__bar--secondlist-item .cart:hover {
   display: inline-block;
   padding-left: 6rem;
   color: #66fcf1;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
   font-size: 1.76rem;
 }
@@ -565,14 +567,19 @@ header .navigation__bar--secondlist-item .cart:hover {
 
 .services {
   background: #0b0c10;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   overflow: hidden;
 }
 .services__cardContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
+}
+@media (max-width: 62em) {
+  .services__cardContainer {
+    grid-template-columns: 100% 100% 100% 100%;
+  }
 }
 .services__cardContainer:hover .previous__btn__secondary {
   left: 5rem;
@@ -676,10 +683,11 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 .testimonials__container__item {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 74%;
+  justify-content: space-around;
   border: 1.5px gray solid;
   border-radius: 20px;
-  padding: 8rem 6.5rem;
+  padding: 8rem 3%;
 }
 .testimonials__container__item__userInfo {
   display: flex;
@@ -881,8 +889,8 @@ header .navigation__bar--secondlist-item .cart:hover {
 }
 .pricing__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(3, 32%);
+  gap: 2%;
 }
 .pricing__container__content {
   background-color: #0b0c10;
