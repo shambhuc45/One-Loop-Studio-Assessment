@@ -1,57 +1,94 @@
 .testimonials {
-  &__item {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    border: 1.5px gray solid;
-    border-radius: 20px;
-    padding: 8rem 6.5rem;
+  &__container {
+    position: relative;
+    overflow: hidden;
 
-    &__userInfo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &__image {
-        height: 100px;
-        width: 100px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 2rem;
+    &:hover {
+      .btn__prev__testimonials {
+        left: 5rem;
       }
-      &__name {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 3.5rem;
-      }
-      &__position {
-        color: $color-primary;
-        font-size: $normal-fontSize;
-        font-weight: 600;
+      .btn__next__testimonials {
+        right: 5rem;
       }
     }
-    &__review {
-      position: relative;
-      padding: 0 1rem;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -2.5rem;
-        width: 1px;
-        height: 100%;
-        background-color: gray;
-      }
+    &__item {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      border: 1.5px gray solid;
+      border-radius: 20px;
+      padding: 8rem 6.5rem;
 
-      &__text {
-        font-size: $medium-fontSize;
-        line-height: 4.5rem;
-        font-weight: 400;
+      &__userInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .quote {
-          font-style: italic;
+        &__image {
+          height: 100px;
+          width: 100px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin-bottom: 2rem;
+        }
+        &__name {
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 3.5rem;
+        }
+        &__position {
+          color: $color-primary;
+          font-size: $normal-fontSize;
+          font-weight: 600;
         }
       }
+      &__review {
+        position: relative;
+        padding: 0 1rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -2.5rem;
+          width: 1px;
+          height: 100%;
+          background-color: gray;
+        }
+
+        &__text {
+          font-size: $medium-fontSize;
+          line-height: 4.5rem;
+          font-weight: 400;
+
+          .quote {
+            font-style: italic;
+          }
+        }
+      }
+    }
+    .btn__prev__testimonials,
+    .btn__next__testimonials {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 0;
+      background-color: $color-primary;
+      cursor: pointer;
+      top: 43%;
+    }
+    .btn__prev__testimonials {
+      transform: rotate(180deg);
+      left: -20rem;
+      transition: left 0.6s ease;
+    }
+    .btn__next__testimonials {
+      right: -20rem;
+      transition: right 0.7s ease;
     }
   }
 }

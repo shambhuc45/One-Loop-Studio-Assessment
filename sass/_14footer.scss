@@ -1,0 +1,152 @@
+.heading__footer__primary {
+  font-size: $medium-fontSize;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.ul__listItem__footer {
+  font-size: $normal-fontSize;
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+.heading__footer__secondary {
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.footer {
+  &__primary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    padding-bottom: 5rem;
+
+    &__info {
+      &__logoSection {
+        margin-bottom: 2.5rem;
+        align-items: center;
+
+        &__image {
+          height: 50px;
+          margin-right: 10px;
+        }
+        &__title {
+          font-size: 27.8px;
+          font-weight: 700;
+          white-space: nowrap;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $color-primary;
+            transition: width 0.35s ease-in-out;
+          }
+
+          &:hover {
+            opacity: 1;
+            color: $color-primary;
+
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+      &__description {
+        font-size: $normal-fontSize;
+        line-height: 2.8rem;
+      }
+    }
+    &__quickContainer {
+      &__list {
+        &__item--greenTick {
+          &::before {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.125em;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%2366fcf1' d='M437.3 30L202.7 339.3L64 200.7l-64 64L213.3 478L512 94z'/%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+    &__recentNews {
+      &__list {
+        display: inline-block;
+        &__item--center {
+          display: flex;
+          align-items: center;
+          .bracket {
+            &::before {
+              content: "(";
+            }
+            &::after {
+              content: ")";
+            }
+          }
+        }
+      }
+    }
+  }
+  &__secondary {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    &__social {
+      &__links {
+        gap: 2rem;
+
+        &__element {
+          transition: all 0.35s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &__formContainer {
+      &__form {
+        .email-input {
+          height: 4.5rem;
+          outline: 0;
+          border: 1px;
+          width: 90%;
+          border-radius: 3px;
+          background-color: rgba(128, 128, 128, 0.18);
+          margin-bottom: 1.5rem;
+          font-size: 1.6rem;
+          color: #e7e7e7;
+          padding: 1rem;
+
+          &::placeholder {
+            color: #e7e7e7;
+            font-size: 1.6rem;
+          }
+        }
+        .btn-subscribe {
+          background-color: $color-primary;
+          font-size: 1.6rem;
+          padding: 1.2rem 2.5rem;
+          border: 0;
+        }
+      }
+    }
+  }
+  &__copyright {
+    background-color: $color-background;
+    padding: 2.5rem 0;
+
+    h4 {
+      font-size: $normal-fontSize;
+      font-weight: 400;
+    }
+  }
+}

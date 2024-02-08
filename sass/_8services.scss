@@ -2,11 +2,21 @@
   background: $color-background;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  overflow: hidden;
 
   &__cardContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     position: relative;
+
+    &:hover {
+      .previous__btn__secondary {
+        left: 5rem;
+      }
+      .next__btn__secondary {
+        right: 5rem;
+      }
+    }
 
     &__card {
       position: relative;
@@ -75,4 +85,28 @@
       }
     }
   }
+}
+
+.previous__btn__secondary,
+.next__btn__secondary {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 0;
+  background-color: $color-primary;
+  cursor: pointer;
+  top: 43%;
+}
+.previous__btn__secondary {
+  transform: rotate(180deg);
+  left: -20rem;
+  transition: left 0.7s ease;
+}
+.next__btn__secondary {
+  right: -20rem;
+  transition: right 0.7s ease;
 }

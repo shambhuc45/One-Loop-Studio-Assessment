@@ -1,0 +1,38 @@
+.clients {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: rgba(128, 128, 128, 0.15);
+
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(phone) {
+      grid-template-columns: 100%;
+      justify-content: center;
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      filter: brightness(1000%);
+
+      img {
+        height: 9.5rem;
+
+        @include respond(desktops) {
+          height: 7rem;
+        }
+        @include respond(tab-land) {
+          height: 5rem;
+        }
+        @include respond(phone) {
+          height: auto;
+        }
+      }
+    }
+  }
+}

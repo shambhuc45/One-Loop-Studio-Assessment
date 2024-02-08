@@ -104,6 +104,36 @@ header {
             white-space: nowrap;
           }
         }
+        .dropdown {
+          position: relative;
+
+          &:hover {
+            .sub-menu {
+              display: block;
+              transform: translateY(0);
+            }
+          }
+        }
+        .sub-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: rgba(128, 128, 128, 0.15);
+          min-width: 20rem;
+          z-index: 1;
+          transform: translateY(-10px);
+          transition: transform 0.3s ease;
+        }
+        .dropdown-items {
+          display: flex;
+          justify-self: flex-start;
+          padding-left: 1.5rem;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid gray;
+          }
+        }
       }
       &--secondlist {
         display: flex;
