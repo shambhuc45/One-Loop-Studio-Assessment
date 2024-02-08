@@ -516,15 +516,30 @@ header .navigation__bar--secondlist-item .cart:hover {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
 }
+@media (max-width: 36em) {
+  .experience__content__left__imageCards {
+    grid-template-columns: 100%;
+  }
+}
 .experience__content__left__imageCards__container {
   height: 23rem;
   overflow: hidden;
+}
+@media (max-width: 36em) {
+  .experience__content__left__imageCards__container {
+    height: 40rem;
+  }
 }
 .experience__content__left__imageCards__container__image {
   height: 23rem;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+@media (max-width: 36em) {
+  .experience__content__left__imageCards__container__image {
+    height: 40rem;
+  }
 }
 .experience__content__left__imageCards__container__image:hover {
   transform: scale(1.1);
@@ -535,6 +550,12 @@ header .navigation__bar--secondlist-item .cart:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+@media (max-width: 36em) {
+  .experience__content__left__stats {
+    grid-template-columns: 100%;
+    row-gap: 8rem;
+  }
 }
 .experience__content__left__stats__item__score {
   font-size: 4rem;
@@ -870,13 +891,29 @@ header .navigation__bar--secondlist-item .cart:hover {
   width: 100%;
   padding-left: 4rem;
 }
+@media (max-width: 36em) {
+  .articles__content__all {
+    padding-left: 0;
+  }
+}
 .articles__content__all__item {
   margin-bottom: 2.5rem;
   gap: 2rem;
 }
+@media (max-width: 36em) {
+  .articles__content__all__item {
+    display: block;
+    width: 100%;
+  }
+}
 .articles__content__all__item__imageContainer {
   height: 15rem;
   border-radius: 15px;
+}
+@media (max-width: 36em) {
+  .articles__content__all__item__imageContainer:hover .articles__content__all__item__imageContainer__image {
+    transform: none;
+  }
 }
 .articles__content__all__item__imageContainer:hover .articles__content__all__item__imageContainer__image {
   transform: scale(1.1);
@@ -888,6 +925,11 @@ header .navigation__bar--secondlist-item .cart:hover {
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 36em) {
+  .articles__content__all__item__imageContainer__image {
+    width: 100%;
+  }
 }
 .articles__content__all__item__info {
   font-size: 1.76rem;

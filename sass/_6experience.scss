@@ -24,26 +24,27 @@
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
 
-        // &__image {
-        //   height: 100%;
-        //   width: 100%;
-        //   object-fit: cover;
-
-        //   &:hover {
-        //     transform: scale(1.1);
-        //     transition: all 0.4s ease-in-out;
-        //   }
-        // }
+        @include respond(phone) {
+          grid-template-columns: 100%;
+        }
 
         &__container {
           height: 23rem;
           overflow: hidden;
+
+          @include respond(phone) {
+            height: 40rem;
+          }
 
           &__image {
             height: 23rem;
             width: 100%;
             object-fit: cover;
             border-radius: 10px;
+
+            @include respond(phone) {
+              height: 40rem;
+            }
 
             &:hover {
               transform: scale(1.1);
@@ -57,6 +58,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+
+        @include respond(phone) {
+          grid-template-columns: 100%;
+          row-gap: 8rem;
+        }
 
         &__item {
           &__score {
