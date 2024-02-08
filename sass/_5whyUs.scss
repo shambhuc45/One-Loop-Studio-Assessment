@@ -13,7 +13,9 @@
     border: 2px solid $color-primary;
     height: 100%;
     padding: 4rem;
-    grid-column: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &--heading {
       text-transform: capitalize;
@@ -28,6 +30,7 @@
     &--btn {
       display: inline-block;
       margin-top: 2.5rem;
+      width: fit-content;
     }
   }
 

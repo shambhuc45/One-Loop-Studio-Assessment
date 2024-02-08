@@ -14,10 +14,11 @@
 
     &__item {
       display: grid;
-      grid-template-columns: 20% 80%;
+      grid-template-columns: 20% 74%;
+      justify-content: space-around;
       border: 1.5px gray solid;
       border-radius: 20px;
-      padding: 8rem 6.5rem;
+      padding: 8rem 3%;
 
       &__userInfo {
         display: flex;

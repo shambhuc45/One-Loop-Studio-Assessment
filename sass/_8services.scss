@@ -1,13 +1,17 @@
 .services {
   background: $color-background;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   overflow: hidden;
 
   &__cardContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     position: relative;
+
+    @include respond(tab-land) {
+      grid-template-columns: 100% 100% 100% 100%;
+    }
 
     &:hover {
       .previous__btn__secondary {
