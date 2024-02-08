@@ -9,6 +9,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+    }
+
     &__left {
       &__textTop {
         font-size: $normal-fontSize;

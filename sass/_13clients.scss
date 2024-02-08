@@ -10,6 +10,11 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+      justify-content: center;
+    }
+
     @include respond(phone) {
       grid-template-columns: 100%;
       justify-content: center;
@@ -28,6 +33,9 @@
         }
         @include respond(tab-land) {
           height: 5rem;
+        }
+        @include respond(tab-port) {
+          height: auto;
         }
         @include respond(phone) {
           height: auto;

@@ -11,10 +11,19 @@
     border-radius: 20px;
     justify-content: space-between;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+      row-gap: 4rem;
+    }
+
     &__featured {
       height: 70rem;
       overflow: hidden;
       border-radius: 20px;
+
+      @include respond(tab-port) {
+        padding-bottom: 4rem;
+      }
 
       &:hover {
         .articles__content__featured__image {

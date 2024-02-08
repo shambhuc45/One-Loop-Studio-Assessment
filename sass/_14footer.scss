@@ -20,6 +20,11 @@
     gap: 2.5rem;
     padding-bottom: 5rem;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+      row-gap: 4rem;
+    }
+
     &__info {
       &__logoSection {
         margin-bottom: 2.5rem;
@@ -99,6 +104,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+      row-gap: 5rem;
+    }
     &__social {
       &__links {
         gap: 2rem;

@@ -21,6 +21,10 @@
     grid-template-columns: repeat(3, 32%);
     gap: 2%;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+    }
+
     &__content {
       background-color: $color-background;
       padding: 5rem;
