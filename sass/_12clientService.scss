@@ -4,6 +4,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+    }
+
     &__card {
       background: $color-background;
       padding: 6rem;

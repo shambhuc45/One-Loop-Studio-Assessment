@@ -9,6 +9,10 @@
   letter-spacing: normal;
   background-color: $color-background;
 
+  @include respond(tab-port) {
+    grid-template-columns: 100%;
+  }
+
   &__mainTopic {
     border: 2px solid $color-primary;
     height: 100%;
@@ -42,6 +46,12 @@
       display: flex;
       gap: 1rem;
 
+      @include respond(tab-port) {
+        width: 100%;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
       &-item {
         padding: 1rem 0;
 
@@ -50,6 +60,10 @@
           margin-top: 3px;
           img {
             height: 35px;
+
+            @include respond(tab-port) {
+              height: 50px;
+            }
           }
         }
 

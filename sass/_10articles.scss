@@ -11,10 +11,19 @@
     border-radius: 20px;
     justify-content: space-between;
 
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+      row-gap: 4rem;
+    }
+
     &__featured {
       height: 70rem;
       overflow: hidden;
       border-radius: 20px;
+
+      @include respond(tab-port) {
+        padding-bottom: 4rem;
+      }
 
       &:hover {
         .articles__content__featured__image {
@@ -90,13 +99,30 @@
       width: 100%;
       padding-left: 4rem;
 
+      @include respond(phone) {
+        padding-left: 0;
+      }
+
       &__item {
         margin-bottom: 2.5rem;
         gap: 2rem;
 
+        @include respond(phone) {
+          display: block;
+          width: 100%;
+        }
+
         &__imageContainer {
           height: 15rem;
           border-radius: 15px;
+
+          @include respond(phone) {
+            &:hover {
+              .articles__content__all__item__imageContainer__image {
+                transform: none;
+              }
+            }
+          }
 
           &:hover {
             .articles__content__all__item__imageContainer__image {
@@ -111,6 +137,10 @@
             object-fit: cover;
             border-radius: 15px;
             transition: transform 0.3s ease-in-out;
+
+            @include respond(phone) {
+              width: 100%;
+            }
           }
         }
 
